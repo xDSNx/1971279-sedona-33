@@ -29,7 +29,7 @@ body {
 .welcome {
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-image: url(../images/index-background.jpg);
+    background-image: url("../images/index-background.jpg");
     text-align: center;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .mailing-list {
-    background-image: url(/images/background.jpg);
+    background-image: url("/images/background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     text-align: center;
@@ -156,7 +156,7 @@ body {
 }
 
 .inner-header {
-    background-image: url(/images/mountains.png);
+    background-image: url("/images/mountains.png");
     background-size: 100%;
     background-repeat: no-repeat;
     color: #FFFFFF;
@@ -195,6 +195,16 @@ body {
     font-size: 18px;
     line-height: 23px;
     color: #FFFFFF;
+}
+
+.hotel-rating {
+    background:#F2F2F2;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
 }
 
 .filter-result {
