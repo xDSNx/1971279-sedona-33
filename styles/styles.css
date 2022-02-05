@@ -39,7 +39,11 @@ body {
     line-height: 26px;
     text-decoration: none;
     color: #000000;
-    text-align: center;    
+    text-align: center; 
+}
+
+.navigation-item {       
+    list-style-type: none;
 }
 
 .benefits {
@@ -80,6 +84,14 @@ body {
     color: #000000;
 }
 
+.benefits-item {       
+    list-style-type: none; 
+}
+
+.benefits-list-item {
+    list-style-type: none;
+}
+
 .hotel-search {
     background-color: #FFFFFF;
     color:  #000000;
@@ -117,7 +129,7 @@ body {
 }
 
 .mailing-list {
-    background-image: url("/images/background.jpg");
+    background-image: url("../images/background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     text-align: center;
@@ -156,7 +168,7 @@ body {
 }
 
 .inner-header {
-    background-image: url("/images/mountains.png");
+    background-image: url("../images/mountains.png");
     background-size: 100%;
     background-repeat: no-repeat;
     color: #FFFFFF;
@@ -288,4 +300,16 @@ body {
     font-size: 18px;
     line-height: 23px;
     color: #333333;
+}
+
+.footer-social-item {
+    list-style-type: none;
+}
+
+.pagination-item {
+    list-style-type: none;
+}
+
+.hotel-card-item {
+    list-style-type: none;
 }
