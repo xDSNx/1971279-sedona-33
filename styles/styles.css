@@ -130,7 +130,7 @@ body {
 
 .mailing-list {
     background-image: url("../images/background.jpg");
-    background-size: 100% auto;
+    background-size: auto auto;
     background-repeat: no-repeat;
     text-align: center;
     color: #FFFFFF;    
@@ -169,10 +169,9 @@ body {
 
 .inner-header {
     background-image: url("../images/mountains.png");
-    background-size: 100%;
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    color: #FFFFFF;
-            
+    color: #FFFFFF;      
 }
 
 .hotels {
