@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
     <!--Шапка -->
     <header class="header-index">
       <nav class="navigation">
-        <img class="logo" src="/images/logo.svg" width="139" height="70" alt="Логотип города Седона">
+        <img class="logo" src="images/logo.svg" width="139" height="70" alt="Логотип города Седона">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="#">Главная</a>            
@@ -22,20 +23,18 @@
         </ul>
         <ul class="navigator-list navigation-custom-menu">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Поиск
-              </span>
+            <a class="navigation-link search" href="#">
+              <span class="visually-hidden">Поиск</span><img src="images/search.png" width="18" height="18" alt="">
             </a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">
-                Избранное
-              </span>
+              <span class="visually-hidden">Избранное</span><img src="images/favorites.png" width="18" height="18" alt="">
+              
             </a>
-          </li><li class="navigation-item">
-            <a class="navigation-link" href="#">Хочу сюда</a>
+          </li>
+          <li class="navigation-item">
+            <a class="button" href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>      
@@ -43,34 +42,38 @@
     <main class="main-index">
       <section class="welcome">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-        <ol class="greeting">
-          <li class="greeting-item"><img src="/images/welcome.svg" width="458" height="352" alt="welcome to the gorgeous sedona because the grand canyon sucks!"></li>
-        </ol>
+        <img src="images/welcome.svg" width="458" height="352" alt="welcome to the gorgeous sedona because the grand canyon sucks!">        
       </section>
       <section class="benefits">
-        <p>Седона — небольшой городок в Аризоне,
+        <p class="benefits-sedona-text">Седона — небольшой городок в Аризоне,
           заслуживающий большего!<p>
-        <h2 class="benefits-h2">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2>
+        <h2 class="benefits-title">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2>
         <ul class="benefits-list">
           <li class="benefits-item">
-            <h3 class="benefits-title">Настоящий
-              городок</h3>
-            <p class="benefits-number">— №1 —</p>
-            <p class="benefits-description">Седона — не аттракцион для туристов, там течёт 
-              своя жизнь</p>
+            <div class="benefits-title-item-main">
+              <h3 class="benefits-title-item">Настоящий
+                городок</h3>
+              <p class="benefits-number">— №1 —</p>
+              <p class="benefits-description">Седона — не аттракцион для туристов, там течёт 
+                своя жизнь</p>              
+            </div>
+            <img src="images/real-town.jpg" width="800" height="384" alt="Часть города">
               <ul class="benefits-list-within-a-list">
                 <li class="benefits-list-item">
+                  <img src="images/icon-housing.svg" width="75" height="72" alt="Домик">
                   <h4 class="benefits-list-title">Жильё</h4>
                   <p>Рекомендуем пожить 
                     в настоящем мотеле, 
                     всё как в кино!</p>
                 </li>
                 <li class="benefits-list-item">
+                  <img src="../images/icon-burger.svg" width="74" height="70" alt="Бургер">
                   <h4 class="benefits-list-title">Еда</h4>
                   <p>Всегда заказывайте
                     топовый фирменный бургер, вы не разочаруетесь!</p>
                 </li>
                 <li class="benefits-list-item">
+                  <img src="images/icon-souvenirs.svg" width="64" height="76" alt="Коробка с лентой и бантом">
                   <h4 class="benefits-list-title">Сувениры</h4>
                   <p>Не только китайского, 
                     но и настоящего местного производства!</p>
@@ -78,26 +81,29 @@
               </ul>
           </li>
           <li class="benefits-item">
-            <h3 class="benefits-title">Там есть
-              мост дьявола</h3>
-            <p class="benefits-number">— №2 —</p>
-            <p class="benefits-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <div class="benefits-title-item-main">
+              <h3 class="benefits-title-item">Там есть
+                мост дьявола</h3>
+              <p class="benefits-number">— №2 —</p>
+              <p class="benefits-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
+            <img src="images/devil's-bridge.jpg" width="800" height="384" alt="Скалы с деревьями">
           </li>
           <li class="benefits-item">
-            <h3 class="benefits-title">Небольшая
+            <h3 class="benefits-title-item">Небольшая
               площадь</h3>
             <p class="benefits-number">— №3 —</p>
             <p class="benefits-description">Все достопримечательности 
               находятся очень близко</p>
           </li>
           <li class="benefits-item">
-            <h3 class="benefits-title">Красивая
+            <h3 class="benefits-title-item">Красивая
               дорога</h3>
             <p class="benefits-number">— №4 —</p>
             <p class="benefits-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="benefits-item">
-            <h3 class="benefits-title">Мало
+            <h3 class="benefits-title-item">Мало
               туристов</h3>
             <p class="benefits-number">— №5 —</p>
             <p class="benefits-description">Большинство едет в Гранд Каньон и толпится там</p>
@@ -106,15 +112,15 @@
       </section>
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
-        <h3 class="hotel-search-h3">Заинтересовались?</h3>
-        <p>Укажите предполагаемые даты поездки,<br>
+        <h3 class="hotel-search-title">Заинтересовались?</h3>
+        <p class="hotel-search-date">Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
         <a class="button button-hotel-search" href="catalog.html">Поиск гостиницы в Седоне</a>
       </section>
       <section class="mailing-list">
-        <h2 class="mailing-list-h2">Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама,<br>
+        <h2 class="mailing-list-title">Подпишитесь на рассылку</h2>
+        <p class="mailing-list-text">Только полезная информация и никакого спама,<br>
           честное бойскаутское!</p>
         <form class="mailing-list-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" name="mailing-list-email" placeholder="Ваш e-mail">
@@ -149,7 +155,7 @@
       </section>
       <section class="developer">
         <h2 class="visually-hidden">Разработчик</h2>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img src="/images/logo_htmlacademy.svg" alt="html academy"></a>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img src="images/logo_htmlacademy.svg" alt="html academy"></a>
       </section>
     </footer>
   </body>
