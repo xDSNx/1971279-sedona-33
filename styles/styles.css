@@ -88,6 +88,13 @@ body {
     margin: 0 auto;
 }
 
+.inner-header {
+    background-image: url("../images/mountains.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    color: #FFFFFF;      
+}
+
 .welcome {
     background-repeat: no-repeat;
     background-image: url("../images/index-background.jpg");
@@ -264,13 +271,6 @@ body {
     width: 110px;
 }
 
-.inner-header {
-    background-image: url("../images/mountains.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    color: #FFFFFF;      
-}
-
 .hotels-filter {    
     display: flex;
     justify-content: space-around;    
@@ -332,29 +332,9 @@ body {
     color: #333333;
 }
 
-.filter-result {    
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 39px;
-    text-transform: uppercase;
-    color: #000000;
-    background: #FFFFFF;
-}
-
-.filter-result {
-    display: flex;
-    width: 1060px;
-    margin: 0 auto;
-}
-
-.number-of-results-found {
-    width: 340px;
-    margin-right: 210px;
-}
-
 .select-control {
     width: 287px;
-    margin-right: 97px;
+    margin-right: 81px;
 }
 
 .button-dark {
@@ -369,16 +349,37 @@ body {
     margin-right: 8px;
 }
 
-.hotel-card-list {
-    display: flex;
+.sorting {
     width: 1060px;
-    margin: 0 auto;    
+    margin: 0 auto;
+}
+
+.display-sort-items {
+    display: flex;
+}
+
+.number-of-results-found {
+    width: 340px;
+    margin: 0;
+    margin-right: 210px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.hotel-card-list {    
+    display: flex;     
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .hotel-card-item {
-    width: 340px;
+    width: 300px;
     margin-right: 10px;
+    padding: 20px;
+    list-style-type: none;
 }
 
 .hotel-card-title {
@@ -461,9 +462,5 @@ body {
 }
 
 .pagination-item {
-    list-style-type: none;
-}
-
-.hotel-card-item {
     list-style-type: none;
 }
