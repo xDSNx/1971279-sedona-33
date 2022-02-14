@@ -22,7 +22,7 @@
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigator-list navigation-custom-menu">
+        <ul class="navigation-list navigation-custom-menu">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">
@@ -36,8 +36,9 @@
                 Избранное
               </span>
             </a>
-          </li><li class="navigation-item">
-            <a class="button" href="#">Хочу сюда</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>      
@@ -46,7 +47,7 @@
     <div class="page-container">            
       <header class="inner-header">
         <div class="container-page-inner">
-          <h1 class="visually-hidden" hidden>Каталог</h1>          
+          <h1 class="visually-hidden">Каталог</h1>          
           <h2 class="hotels">Гостиницы Седоны</h2>
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
@@ -128,22 +129,22 @@
       </header>
       <section class="sorting">
         <div class="display-sort-items">
-          <h2 class="visually-hidden" hidden>Сортировка</h2>
-          <p class="number-of-results-found">Найдено гостиниц:<span>38</span></p>            
+          <h2 class="visually-hidden">Сортировка</h2>
+          <p class="number-of-results-found">Найдено гостиниц: 38</p>            
           <select class="select-control" aria-label="Сортировка">
             <option value="popular">Сначала популярное</option>
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
           </select>
           <a class="button-dark" href="#">
-            <span class="visually-hidden" hidden>Показать плитки</span><img src="images/mode-tile.svg" width="16" height="14" alt="Отображение результатов поиска плитками">
+            <span class="visually-hidden">Показать плитки</span><img src="images/mode-tile.svg" width="16" height="14" alt="Отображение результатов поиска плитками">
           </a>
           <a class="button-light" href="#">
-            <span class="visually-hidden" hidden>Показать слайдшоу</span><img src="images/mode-slideshow.svg" width="16" height="14" alt="Отображение результатов поиска слайдшоу">
+            <span class="visually-hidden">Показать слайдшоу</span><img src="images/mode-slideshow.svg" width="16" height="14" alt="Отображение результатов поиска слайдшоу">
           </a>
           <a class="button-light" href="#">
-            <span class="visually-hidden" hidden>Показать список</span><img src="images/mode-list.svg" width="16" height="14" alt="Отображение результатоd поиска списком">
-          </a>
+            <span class="visually-hidden">Показать список</span><img src="images/mode-list.svg" width="16" height="14" alt="Отображение результатоd поиска списком">
+          </a>         
         </div>     
         <ul class="hotel-card-list">
           <li class="hotel-card-item">
@@ -209,41 +210,47 @@
             </div>  
             <span class="hotel-rating">Рейтинг: 9,2</span>
           </li>
-        </ul>             
-        <button class="button pagination-show-more" type="button">Загрузить ещё</button>
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
-          </li>
-          <li class="pagination-item-amount">
-            <p>Гостиниц на странице:</p>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="popular">1</option>
-              <option value="cheap">2</option>
-              <option value="expensive">3</option>
-              <option value="cheap" selected>4</option>
-              <option value="expensive">5</option>
-              <option value="expensive">6</option>
-            </select>
-          </li>
-        </ul>              
+        </ul>
+        <div class="button-pagination-show-more">
+          <button class="button pagination-show-more" type="button">Загрузить ещё</button>
+        </div>       
+        <div class="pagination-container">
+          <ul class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">10</a>
+            </li>
+            <li class="pagination-item-amount">
+              <p>Гостиниц на странице:</p>
+            </li>
+            <li class="pagination-item">
+              <select class="pagination-select-control" aria-label="Сортировка">
+                <option value="popular">1</option>
+                <option value="cheap">2</option>
+                <option value="expensive">3</option>
+                <option value="cheap" selected>4</option>
+                <option value="expensive">5</option>
+                <option value="expensive">6</option>
+              </select>
+            </li>
+          </ul>
+        </div>                
       </section>
-      <section class="mailing-list">
+      <section class="mailing-list-catalog">
         <h2 class="mailing-list-h2">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама,<br>
           честное бойскаутское!</p>
