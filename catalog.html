@@ -24,26 +24,23 @@
           </ul>
           <ul class="navigation-list navigation-custom-menu">
             <li class="navigation-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">
-                  Поиск
-                </span>
+              <a class="navigation-link" href="#"><svg class="navigation-icon aria-hidden="true" focusable="false" width="20" height="19" xmlns="http://www.w3.org/2000/svg"><path d="m19 17-3.7-3.7A8 8 0 0 0 17 8.4a8 8 0 0 0-8-8 8 8 0 1 0 5 14.4l3.6 3.8L19 17ZM9 14.7a6 6 0 0 1-6-6 6 6 0 0 1 12 0 6 6 0 0 1-6 6Z" fill="#000"/></svg>
+                <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">
-                <span class="visually-hidden">
-                  Избранное
-                </span>
+                <img class="number" src="images/number.png" alt=""><svg class="navigation-icon aria-hidden="true" focusable="false" width="19" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.4 17a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 6 0c1.3 0 2.5.5 3.5 1.3C10.5.5 12 0 13.1 0c3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.3.2-.5.3-.9.3Zm-6-9.5 6.1 6.9 6.3-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.8 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4A3.7 3.7 0 0 0 6 2.1a3.3 3.3 0 0 0-3.3 3.3c0 .9.3 1.6.7 2.1Z" fill="#000"/></svg>
+                <span class="visually-hidden">Избранное</span>
               </a>
             </li>
             <li class="navigation-item">
-              <a class="button navigation-link" href="#">Хочу сюда</a>
+              <a class="button" href="#">Хочу сюда</a>
             </li>
           </ul>
         </nav>      
     </header>
-    <main class="main-inner main-container">
+    <main class="main-container">
       <div class="page-container">            
         <header class="inner-header">
           <div class="container-page-inner">
@@ -122,8 +119,8 @@
                     price" step="1">                        
                 </label>
               </fieldset>    
-              <button class="button-submit" type="submit">Применить</button>
-              <button class="button-reset" type="reset">Сбросить</button>
+              <button class="button button-submit" type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
             </form>
           </div>          
         </header>
@@ -137,18 +134,21 @@
               <option value="expensive">Сначала дорогое</option>
             </select>
             <a class="button-tile" href="#">
-              <span class="visually-hidden">Показать плитки</span><img class="button-images" src="images/mode-tile.svg" width="16" height="14" alt="Отображение результатов поиска плитками">
+              <svg aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 0H0v6h4V0Zm12 0h-4v6h4V0Zm-6 0H6v6h4V0ZM4 8H0v6h4V8Zm12 0h-4v6h4V8Zm-6 0H6v6h4V8Z" fill="#000"/></svg>
+              <span class="visually-hidden">Показать плитки</span>              
             </a>
             <a class="button-slide-show" href="#">
-              <span class="visually-hidden">Показать слайдшоу</span><img class="button-images" src="images/mode-slideshow.svg" width="16" height="14" alt="Отображение результатов поиска слайдшоу">
+              <svg aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000"/></svg>
+              <span class="visually-hidden">Показать слайдшоу</span>
             </a>
             <a class="button-list" href="#">
-              <span class="visually-hidden">Показать список</span><img class="button-images" src="images/mode-list.svg" width="16" height="14" alt="Отображение результатоd поиска списком">
+              <svg aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 0H0v2h2V0Zm14 0H4v2h12V0ZM2 4H0v2h2V4Zm14 0H4v2h12V4ZM2 8H0v2h2V8Zm14 0H4v2h12V8ZM2 12H0v2h2v-2Zm14 0H4v2h12v-2Z" fill="#000"/></svg>
+              <span class="visually-hidden">Показать список</span>
             </a>         
           </div>     
           <ul class="hotel-card-list">
             <li class="hotel-card-item">
-              <a class="hotel-card-image-link" href="#">
+              <a href="#">
                 <img class="hotel-card-image" src="images/Amara-Resort-Spa.jpg" width="299" height="206" alt="Гостиница Amara Resort Spa">                
               </a>
               <a class="hotel-card-title-link" href="#"><h3 class="hotel-card-title">Amara Resort & Spa</h3></a>
@@ -167,7 +167,7 @@
               </div>              
             </li>
             <li class="hotel-card-item">
-              <a class="hotel-card-image-link" href="#">
+              <a href="#">
                 <img class="hotel-card-image" src="images/Desert-Quail-Inn.jpg" width="299" height="206" alt="Гостиница Desert Quail Inn">                
               </a>
               <a class="hotel-card-title-link" href="#"><h3 class="hotel-card-title">Desert Quail Inn</h3></a>
@@ -185,7 +185,7 @@
               </div>              
             </li>
             <li class="hotel-card-item">
-              <a class="hotel-card-image-link" href="#">
+              <a href="#">
                 <img class="hotel-card-image" src="images/Villas-at-Poco-Diablo.jpg" width="299" height="206" alt="Гостиница Villas at Poco Diablo">                
               </a>              
               <a class="hotel-card-title-link" href="#"><h3 class="hotel-card-title">Villas at Poco Diablo</h3></a>
@@ -202,7 +202,7 @@
               </div>              
             </li>
             <li class="hotel-card-item">
-              <a class="hotel-card-image-link" href="#">
+              <a href="#">
                 <img class="hotel-card-image" src="images/Gree-Tree-Inn.jpg" width="299" height="206" alt="Гостиница Gree Tree Inn">                
               </a>
               <a class="hotel-card-title-link" href="#"><h3 class="hotel-card-title">GreenTree Inn</h3></a>
@@ -259,11 +259,11 @@
           </div>                
         </section>
         <section class="mailing-list-catalog">
-          <h2 class="mailing-list-h2">Подпишитесь на рассылку</h2>
-          <p>Только полезная информация и никакого спама,<br>
+          <h2 class="mailing-list-title-catalog">Подпишитесь на рассылку</h2>
+          <p class="mailing-list-text-catalog">Только полезная информация и никакого спама,<br>
             честное бойскаутское!</p>
           <form class="mailing-list-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="email" name="mailing-list-email" placeholder="Ваш e-mail">
+            <input class="mailing-list-form-email-catalog" type="email" name="mailing-list-email" placeholder="Ваш e-mail">
             <button class="button">Подписаться</button>
           </form>
         </section>
@@ -275,17 +275,17 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="button" href="#">
+              <a class="footer-social-link-tw" href="#"><img src="images/twitter.svg" alt="">
                 <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button" href="#">
+              <a class="footer-social-link-f" href="#"><img src="images/social-facebook.svg" alt="">
                 <span class="visually-hidden">Фейсбук</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button" href="#">
+              <a class="footer-social-link-youtube" href="#"><img src="images/social-youtube.svg" alt="">
                 <span class="visually-hidden">Ютуб</span>
               </a>
             </li>
@@ -293,7 +293,7 @@
         </section>
         <section class="main-footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <p>+7 (812) 812-12-12</p>
+          <p class="main-footer-contacts-tel">+7 (812) 812-12-12</p>
         </section>
         <section class="developer">
           <h2 class="visually-hidden">Разработчик</h2>          
