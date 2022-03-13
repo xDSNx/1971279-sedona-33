@@ -175,11 +175,18 @@ body {
 /*Welcome*/
 
 .welcome {
+    position: relative;
     background-repeat: no-repeat;
     background-image: url("../images/index-background.jpg");    
     text-align: center;
     padding-top: 50px;
     padding-bottom: 80px;
+}
+
+.divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 /*Benefits*/
@@ -325,7 +332,6 @@ body {
     text-transform: uppercase;
     margin-top: 90px;
     margin-bottom: 15px;
-    height: 50px;
 }
 
 .hotel-search-date {
@@ -346,10 +352,11 @@ body {
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
-    margin: 0 auto;    
+    margin: 0 auto;   
+    padding: 0; 
     margin-bottom: 90px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     width: 575px;
     border-radius: 10px;
 }
@@ -559,6 +566,7 @@ body {
     background-repeat: no-repeat;
     color: #FFFFFF;
     padding-top: 35px;
+    margin-bottom: 44px;
 }
 
 .container-page-inner {
@@ -601,12 +609,6 @@ body {
 
 /*Filter*/
 
-.control-input {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 23px;
-}
-
 .hotels {
     font-weight: 700;
     font-size: 60px;
@@ -615,28 +617,209 @@ body {
     padding: 0;
 }
 
-.hotels-filter {    
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 83px;
-}
-
-.hotels-filter-group {
-    width: 150px;
+.hotels-filter-list {
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.hotels-filter-group-price {
-    width: 280px;
+.hotels-filter {    
+    display: flex;
+    align-items: flex-start;
+}
+
+.control {
+    position: relative;
+    display: block;
+    padding-left: 35px;
+    padding-bottom: 15px;
+}
+
+.control-mark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.control:hover .control-mark {
+    border-color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+}
+
+.control-input:disabled + .control-mark {
+    border-color: #242424;
+  }
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+    position: absolute;
+    top: 9px;
+    left: 4px;
+    width: 12px;
+    height: 2px;
+    background-color: #3F5E72;
+    content: "";
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+    transform: rotate(45deg);
+  }
+  
+.control-input[type="checkbox"]:checked + .control-mark::after {
+    transform: rotate(-45deg);
+}
+
+.control-label {
+    line-height: 23px;
+}
+
+.hotels-filter-group {
+    margin: 0;
+    padding: 0;
+    border: 0;    
+    padding-right: 67px;
 }
 
 .hotels-filter-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 26px;
+    padding: 0;
+    margin-bottom: 30px;
 }
+
+.hotels-filter-group:nth-of-type(2) {
+    padding-right: 167px;
+}
+
+.hotels-filter-group:nth-of-type(3) {
+    padding-right: 81px;
+}
+
+.hotels-filter-group:nth-of-type(4) {
+    padding: 0;
+    padding-top: 58px;
+}
+
+.control-input[type="radio"] + .control-mark {
+    border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #3F5E72;
+    border-radius: 50%;
+    content: "";
+}
+
+/*Price*/
+
+.hotels-filter-group-label {
+    display: flex;
+}
+
+.range-scale {
+    position: relative;
+    height: 4px;
+    margin-bottom: 94px;    
+    background-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.control-slider {
+    position: absolute;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    background-color: #68A2CA;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+    outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+    top: -8px;
+    right: 267px;
+}
+
+.toggle-max {
+    top: -8px;
+    right: 52px;
+}
+
+.range-wrapper-inputs {
+    display: flex;
+    justify-content: center;
+}
+
+.control-input {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.range-input {
+    padding-top: 14px;
+    padding-bottom: 11px;
+    padding-left: 15px;
+    margin-bottom: 32px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    width: 144px;
+    background-color: transparent;
+}
+
+.range-input-min {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.range-input-max {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.range-input::placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: right;
+    padding-right: 14px;
+}
+
+/*Buttons*/
 
 .button-submit {
     width: 160px;
@@ -646,8 +829,11 @@ body {
     text-transform: uppercase;    
     background-color: #83B3D3;
     color: #FFFFFF;
+    padding: 10px;
+    margin: 0;
     border: 0;
     border-radius: 4px;
+    margin-bottom: 20px;
 }
 
 .button-submit:hover {
@@ -656,7 +842,7 @@ body {
 
 .button-submit:focus {
     background-color: #68A2CA;
-    border: 3px solid #FFFFFF;
+    outline: 3px solid #FFFFFF;
     border-radius: 4px;
 }
 
@@ -681,15 +867,13 @@ body {
 }
 
 .button-reset:focus {
-    border: 3px solid #83B3D3;
-    box-sizing: border-box;
+    outline: 3px solid #83B3D3;
     border-radius: 4px;
 }
 
 .button-reset:active {
     opacity: 0.3;
 }
-
 
 /*Mailing list catalog*/
 
@@ -728,8 +912,7 @@ body {
     flex-wrap: nowrap;
     margin: 0;
     padding: 0;
-    padding-top: 45px;
-    padding-bottom: 53px;
+    margin-bottom: 53px;
     align-items: center;
 }
 
@@ -745,11 +928,29 @@ body {
     color: #000000;
 }
 
-.select-control {
+.select {
+    position: relative;
+    display: flex;
+    align-items: center;
     width: 287px;
-    height: 50px;
-    margin-right: 81px;
-    border-radius: 4px;
+    margin-right: auto;
+  }
+
+.select-control {    
+    background-image: url("../images/arrow-to-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    appearance: none;
+    width: 100%;
+    padding: 10px 19px;
+    padding-right: 100px;
+    font: inherit;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+    border: 2px solid #E6E6E6;
+    border-radius: 4px;    
 }
 
 .select-control:hover {
@@ -1139,10 +1340,19 @@ body {
 }
 
 .pagination-select-control {
-    width: 160px;
-    height: 48px;
-    padding-top: 3px;
-    padding-bottom: 4px;
+    background-image: url("../images/arrow-to-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    appearance: none;
+    width: 100%;
+    padding: 10px 13px;
+    padding-right: 133px;
+    font: inherit;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;
+    border: 2px solid #E6E6E6;
     border-radius: 4px;
 }
 
@@ -1162,3 +1372,312 @@ body {
     opacity: 0.3;
     border: 0;
 }
+
+/*Modal window*/
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+    position: relative;
+    margin: auto;
+    width: 715px;
+    background: #FFFFFF;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+}
+
+.modal-content {
+    padding: 70px;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 54px;
+    right: 70px;
+    width: 53px;
+    height: 53px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    border: none;
+    background-image: url("../images/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.modal-close-button:hover,
+.field:hover {
+    background-color: #E6E6E6;
+}
+
+.modal-close-button:focus,
+.field:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+    background-color: #E6E6E6;
+    opacity: 0.3;
+}
+
+.field:active {
+    background-color: #FFFFFF;
+    outline: 2px solid #000000;
+}
+
+.modal-title {
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0;
+    margin-bottom: 32px;    
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.field {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+}
+
+.search-form .field-group {
+    margin: 0;
+    margin-bottom: 11px;
+}
+
+.search-form .field {
+    width: 420px;
+}
+
+.search-form .field-people {
+    width: 133px;
+}
+
+.search-form .search-form-adults-children {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.field-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.search-form-field-calendar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.3;
+    margin-top: 18px;
+    margin-right: 18px;
+}
+
+.search-form-field {
+    box-sizing: border-box;
+    padding: 5px 212px 5px 19px;
+}
+
+.field-group .search-form-field {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.search-form-search {
+    width: 100%;
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #83B3D3;
+    border-radius: 10px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.search-form-search:hover {
+    background-color: #68A2CA;
+}
+
+.search-form-search:focus {
+    background-color: #68A2CA;
+    border: 3px solid #756257;
+}
+
+.search-form-search:active {
+    background-color: #68A2CA;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search-form-field-clarifications {
+    width: 420px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    color: #FF5757;
+    margin-left: auto;
+}
+
+.field-group-departure ~ .search-form-field-clarifications {
+    color: #333333;
+}
+
+.field-group-arrival {
+    width: 155px;
+}
+
+.field-group-departure {
+    width: 155px;
+}
+
+.field-group-adults {
+    width: 155px;
+}
+
+.field-group-adults-plus {
+    position: absolute;
+    top: 35%;
+    right: 52%;
+}
+
+.field-group-adults-minus {
+    position: absolute;
+    top: 48%;
+    right: 68%;
+}
+
+.field-group-children {
+    width: 54px;
+    margin-right: 43px;
+}
+
+.field-group-children-plus {
+    position: absolute;
+    top: 35%;
+    right: 4%;
+}
+
+.field-group-children-minus {
+    position: absolute;
+    top: 48%;
+    right: 19%;
+}
+
+.plus-minus:hover {
+    fill: #000000;
+}
+
+.plus-minus:focus {
+    fill: #000000;
+    outline: 3px solid #83B3D3;
+}
+
+.field-people {
+    margin-right: 53px;
+    padding: 5px 50px 5px 50px;
+    text-align: center;
+}
+
+.field-people:last-child {
+    margin: 0;    
+}
+
+.modal-container-close {
+    display: none;
+}
+
+/*Tooltip*/
+
+.tooltip {  
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 55px;
+    width: 25px;
+    height: 25px;
+}
+
+.tooltip-toggle {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.tooltip-icon {
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    display: block;
+}
+
+.tooltip-icon-i {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+}
+  
+.tooltip-toggle:hover .tooltip-icon {
+    fill: #68A2CA;
+}
+
+.tooltip-text {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: none;
+    border-radius: 10px;
+    padding: 15px 18px;
+    display: block;
+    width: 216px;
+    left: 45%;
+    transform: translateX(-45%);
+    margin-top: 15px;
+    display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+    content:'';
+    background-image: url("../images/tooltip-arrow.svg");
+    width: 19px;
+    height: 9px;
+    position:absolute;
+    bottom: 100%;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+  }
