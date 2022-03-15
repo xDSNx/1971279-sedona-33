@@ -482,19 +482,19 @@ body {
     margin-right: 0;
 }
 
-.footer-social-link-svg {
-    fill: #83B3D3;
-}
-
-.footer-social-link-svg:hover {
+.footer-social-link:hover {
     fill: #68A2CA;
 }
 
-.footer-social-link-svg:focus {
-    border: 3px solid #83B3D3;
+.footer-social-link:focus {
+    outline: 3px solid #83B3D3;
+    fill: #68A2CA;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
 
-.footer-social-link-svg:active {
+
+.footer-social-link:active {
     opacity: 0.3;
 }
 
@@ -509,23 +509,25 @@ body {
     margin-left: 61px;
 }
 
-.main-footer-contacts-tel {
+.main-footer-contacts-link {
     margin: 0;
+    text-decoration: none;
+    color: #000000;
 }
 
-.main-footer-contacts-tel:hover {
+.main-footer-contacts-link:hover {
     color: #756257;
     cursor: pointer;
 }
 
-.main-footer-contacts-tel:active {
-    opacity: 0.3;
+.main-footer-contacts-link:focus {    
+    outline: 3px solid #83B3D3;
+    border-radius: 10px;
+    color: #756257;
 }
 
-.main-footer-contacts-tel:focus {    
-    border: 3px solid #83B3D3;
-    box-sizing: border-box;
-    border-radius: 10px;
+.main-footer-contacts-link:active {
+    opacity: 0.3;
 }
 
 .developer {
@@ -535,17 +537,18 @@ body {
     margin-right: 75px;
 }
 
-.htmlacademy-link-svg:hover {
+.htmlacademy-link:hover {
     fill: #756257;
 }
 
-.htmlacademy-link-svg:active {
+.htmlacademy-link:active {
     opacity: 0.3;
 }
 
-.htmlacademy-link-svg:focus {
-    border: 3px solid #83B3D3;
-    box-sizing: border-box;
+.htmlacademy-link:focus { 
+    outline: 3px solid #83b3d3; 
+    border-radius: 10px;
+    fill: #756257;
 }
 
 /*Catalog*/
@@ -561,6 +564,7 @@ body {
 /*Catalog header*/
 
 .inner-header {
+    position: relative;
     background-image: url("../images/mountains.png");
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -654,12 +658,22 @@ body {
     border-color: #242424;
   }
 
-.control-input[type="checkbox"]:checked + .control-mark::before,
+
 .control-input[type="checkbox"]:checked + .control-mark::after {
     position: absolute;
     top: 9px;
-    left: 4px;
+    left: 6px;
     width: 12px;
+    height: 2px;
+    background-color: #3F5E72;
+    content: "";
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+    position: absolute;
+    top: 11px;
+    left: 3px;
+    width: 7px;
     height: 2px;
     background-color: #3F5E72;
     content: "";
@@ -722,9 +736,9 @@ body {
 
 /*Price*/
 
-.hotels-filter-group-label {
+/* .hotels-filter-group-label {
     display: flex;
-}
+} */
 
 .range-scale {
     position: relative;
@@ -752,12 +766,20 @@ body {
 }
 
 .range-toggle:hover {
-    background-color: #68A2CA;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.range-toggle:active,
 .range-toggle:focus {
+    outline: 3px solid #83B3D3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.range-toggle:active {
     outline: 2px solid #83B3D3;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 .toggle-min {
@@ -784,6 +806,10 @@ body {
     margin: 0;
 }
 
+.control-mark:focus {
+    outline: 3px solid #83B3D3;
+}
+
 .range-input {
     padding-top: 14px;
     padding-bottom: 11px;
@@ -796,8 +822,26 @@ body {
     background-color: transparent;
 }
 
+.range-input:hover {
+    opacity: 0.6;
+}
+
+.range-input:focus {
+    outline: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 0px 3px #81B3D2;
+    border-radius: 4px 4px 4px 4px;   
+}
+
+.range-input:active {
+    background-color: #756257;
+    box-sizing: border-box;
+    outline: 2px solid #FFFFFF;    
+    border-radius: 4px 4px 4px 4px;    
+}
+
 .range-input-min {
     border-radius: 4px 0px 0px 4px;
+    border-right: 0;
 }
 
 .range-input-max {
@@ -1079,16 +1123,15 @@ body {
     padding: 20px;
 }
 
-.hotel-card-image:hover {
+.hotel-card-image-link:hover {
     opacity: 0.6;
 }
 
-.hotel-card-image:focus {
+.hotel-card-image-link:focus {
     outline: 3px solid #83B3D3;
-    
 }
 
-.hotel-card-image:active {
+.hotel-card-image-link:active {
     opacity: 0.3;
 }
 
